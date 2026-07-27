@@ -853,3 +853,71 @@ footer a{color:rgba(255,255,255,.65)}
 .novpn-verdict p{
   font-size:14px;color:#064e3b;line-height:1.75;
 }
+
+/* ── Articles hub (homepage cards) ── */
+.articles-section{padding:52px 0}
+.articles-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){.articles-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.articles-grid{grid-template-columns:1fr 1fr 1fr}}
+.article-card{
+  display:flex;flex-direction:column;
+  background:var(--card);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);border:1px solid var(--border);
+  transition:box-shadow var(--ease),transform var(--ease),border-color var(--ease);
+  color:var(--text);text-decoration:none;height:100%;
+}
+.article-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:rgba(5,150,105,.2);color:var(--text)}
+.article-card-icon{font-size:26px;margin-bottom:10px;line-height:1}
+.article-card h3{font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:-.2px;line-height:1.3}
+.article-card p{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:14px;flex:1}
+.article-card-link{font-size:13px;font-weight:700;color:var(--primary)}
+
+/* ── Long-form article pages ── */
+.article-hero{padding:44px 0 38px}
+.breadcrumb-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:rgba(255,255,255,.6);font-size:13px;font-weight:600;
+  margin-bottom:18px;transition:color var(--ease);
+}
+.breadcrumb-link:hover{color:#fff}
+.article-body{padding:44px 0}
+.article-body h2{font-size:clamp(19px,3.4vw,24px);font-weight:900;letter-spacing:-.5px;margin:36px 0 12px}
+.article-body h2:first-of-type{margin-top:0}
+.article-body h3{font-size:16px;font-weight:800;letter-spacing:-.3px;margin:22px 0 8px}
+.article-body>.container>p{font-size:14.5px;color:var(--text-secondary);line-height:1.8;margin-bottom:14px;max-width:760px}
+.article-body ul,.article-body ol{margin:0 0 16px;padding-left:0;max-width:760px}
+.article-body ul li,.article-body ol li{
+  font-size:14.5px;color:var(--text-secondary);line-height:1.75;
+  padding-left:22px;position:relative;margin-bottom:8px;list-style:none;
+}
+.article-body ul li::before{content:"•";position:absolute;left:4px;color:var(--primary);font-weight:800}
+.article-body ol{counter-reset:art-ol}
+.article-body ol li{counter-increment:art-ol;padding-left:30px}
+.article-body ol li::before{
+  content:counter(art-ol);position:absolute;left:0;top:1px;
+  width:18px;height:18px;background:var(--primary-light);color:var(--primary-dark);
+  border-radius:5px;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.article-body strong{color:var(--text)}
+.article-note,.article-warn{
+  border-radius:var(--radius-sm);padding:14px 16px;
+  font-size:13.5px;line-height:1.7;margin:18px 0;max-width:760px;
+}
+.article-note{background:#f0fdf4;border:1px solid #bbf7d0;color:#065f46}
+.article-warn{background:linear-gradient(135deg,#fffbeb,#fefce8);border:1px solid #fde68a;color:#78350f}
+.article-toc{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:16px 20px;margin-bottom:8px;max-width:760px;
+}
+.article-toc-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--text-muted);margin-bottom:10px}
+.article-toc ol{margin:0;counter-reset:toc;max-width:none}
+.article-toc ol li{counter-increment:toc;font-size:13.5px;padding-left:22px;margin-bottom:6px;color:var(--text-secondary)}
+.article-toc ol li::before{
+  content:counter(toc)".";position:absolute;left:0;top:0;
+  color:var(--primary);font-weight:700;background:none;width:auto;height:auto;
+}
+.article-toc a{color:var(--text-secondary);font-weight:500}
+.article-toc a:hover{color:var(--primary)}
+.article-related{padding:8px 0 44px}
+.article-related h2{margin-top:0}

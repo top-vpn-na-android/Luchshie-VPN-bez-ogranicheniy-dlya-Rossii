@@ -300,7 +300,7 @@ if (burger && mobileMenu) {
   });
 }
 
-const navSections = ['rating','table','by-task','scams','faq','reviews']
+const navSections = ['rating','table','by-task','scams','articles','faq','reviews']
   .map(id => document.getElementById(id))
   .filter(Boolean);
 const navLinks = document.querySelectorAll('.nav-link');
