@@ -1,5 +1,0 @@
-User-agent: *
-Disallow:
-Disallow: /*?
-
-Sitemap: https://top-vpn-na-android.github.io/sitemap.xml
